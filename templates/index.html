@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Música App</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/index.css">
+</head>
+<body>
+    <h1>Bem-vindo ao Música App</h1>
+    <ul>
+        <li><a href="{{ url_for('registrar_musica') }}">Registrar uma música nova</a></li>
+        <li><a href="{{ url_for('recomendar_musica') }}">Gerar recomendações</a></li>
+        <li><a href="{{ url_for('lista_musicas') }}">Ver todas as músicas</a></li>
+        <li><a href="{{ url_for('criar_playlist') }}">Criar uma playlist</a></li>
+        <li><a href="{{ url_for('minhas_playlists') }}">Ver minhas playlists</a></li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Criar Playlist</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/criar_playlist.css">
+</head>
+<body>	
+	 <div class="search-container">
+			<div class="input-container">
+				<input type="text" id="searchInput" placeholder="Digite a música ou o artista">
+				<button id="clearSearchButton" class="styled-button">Limpar</button>
+				<button id="returnButton" class="styled-button">Voltar ao início</button>
+			</div>
+		</div>
+
+    <div class="split-container">
+		<!--por incrível que pareça funcionou-->
+		<div class="left-column">
+			<div class="container">
+				<h2>Lista de Músicas Salvas</h2>
+				<form id="music-form" method="post">
+					<ul id="listaMusicas">
+						{% if musicas %}
+							{% for musica in musicas %}
+								<li>
+									<input type="checkbox" name="musicas_selecionadas" value="{{ musica[0] }} - {{ musica[1] }}">
+									{{ musica[0] }} - {{ musica[1] }}
+								</li>
+							{% endfor %}
+						{% else %}
+							<p>Lista de músicas vazia, que tal registrar algumas?</p>
+						{% endif %}
+					</ul>
+				</form>
+			</div>
+			<button type="button" id="adicionarButton">Adicionar à Playlist</button>
+			<button type="button" id="verPlaylist">Ver minhas playlists salvas</button>
+		</div>
+		
+		<div class="right-column">
+			<div class="playlist-name-container">
+					<label for="nome_playlist">Nome da Playlist: </label>
+					<input type="text" id="nome_playlist" name="nome_playlist" value="{{ nome_playlist }}" placeholder="Nome da Playlist">
+			</div>	
+			
+			<div class="container-botoes">
+				<input type="submit" value="Salvar" id="saveButton">
+					<button id="removerButton">Remover</button>
+					<button id="limparButton">Limpar</button>
+			</div>		
+				
+			<div class="container">
+				<h2>Playlist do Dia</h2>
+					<ul id="playlist-do-dia" class="playlist">
+						{% for musica in playlist %}
+						<li>
+							<input type="checkbox" name="musicas_playlist" value="{{ loop.index }}">
+							{{ musica[0] }} - {{ musica[1] }}
+						</li>
+						{% endfor %}
+					</ul>
+			</div>
+		</div>
+	 <script>
+		document.getElementById("returnButton").addEventListener("click", function() {
+			window.location.href = "{{ url_for('index') }}";
+		});
+		
+		document.getElementById("verPlaylist").addEventListener("click", function() {
+			window.location.href = "{{ url_for('minhas_playlists') }}";
+		});
+		
+		
+	</script>
+    <script src="../static/javascript/criar_playlist.js"></script>
+</body>
+</html>

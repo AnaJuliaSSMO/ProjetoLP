@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recomendação de Música</title>
+	<script src="../static/javascript/recomendacao.js"></script>
+    <link rel="stylesheet" type="text/css" href="../static/css/recomendacao.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-column">
+            <h1 class="title">Recomendação de Música</h1>
+			<form id="music-form" method="post">
+			<label for="artista">Artista:</label>
+			<input type="text" id="artista" name="artista"><br><br>
+
+			<label for="vibe">Vibe:</label>
+			<select id="vibe" name="vibe">
+				<option value="" disabled selected hidden>Selecione uma opção</option>
+				<option value="feliz">Feliz</option>
+				<option value="triste">Triste</option>
+				<option value="calmo">Calmo</option>
+				<option value="melancolico">Melancólico</option>
+				<option value="daydream">DayDreaming</option>
+				<option value="estudo">Bom para Estudar</option>
+			</select><br><br>
+
+			<label for="genero">Gênero:</label>
+			<select id="genero" name="genero">
+				<option value="" disabled selected hidden>Selecione uma opção</option>
+				<option value="eletro">Eletro</option>
+				<option value="kpop">Kpop</option>
+				<option value="pop">Pop</option>
+				<option value="rock">Rock</option>
+				<option value="R&B">R and B</option>
+				<option value="jazz">Jazz</option>
+				<option value="samba">Samba</option>
+				<option value="rock">Rock</option>
+				<option value="country">Country</option>
+				<option value="rap">Rap</option>
+				<option value="hip-hop">Hip-Hop</option>
+				<option value="classica">Clássica</option>
+				<option value="reggae">Reggae</option>
+			</select><br><br>
+
+			<label for="dancabilidade">Dançabilidade:</label>
+			<select id="dancabilidade" name="dancabilidade">
+				<option value="" disabled selected hidden>Selecione uma opção</option>
+				<option value="lenta">Lenta</option>
+				<option value="medio">Médio</option>
+				<option value="muita">Muita</option>
+				<option value="super">Super</option>
+				<option value="headband">Head bang</option>
+			</select><br><br>
+
+			<label for="bpm">BPM:</label>
+				<input type="number" id="bpm" name="bpm" min="0"><br><br>
+
+			<label for="popularidade">Popularidade:</label>
+			<select id="popularidade" name="popularidade">
+				<option value="" disabled selected hidden>Selecione uma opção</option>
+				<option value="underground">Underground</option>
+				<option value="medio">Médio</option>
+				<option value="famoso">Famoso</option>
+				<option value="mundial">Mundial</option>
+			</select><br><br>
+
+			<input type="submit" value="Obter Recomendação">
+			<input type="button" value="Voltar ao início" id="returnButton">
+		</form>
+        </div>
+		
+		<div class="right-column">
+			<h1>Músicas Recomendadas:</h1>
+			<form id="musicas-form" method="post">
+				<p>{{ mensagem }}</p>
+				<ul>
+					{% for musica in recomendacoes %}
+						<li>{{ musica }}</li>
+						<p></p>
+					{% endfor %}
+				</ul>	
+			</fom> 
+		</div>
+			
+
+	
+    </div>
+	 <script>
+		document.getElementById("returnButton").addEventListener("click", function() {
+			window.location.href = "{{ url_for('index') }}";
+		});
+	</script>
+</body>
+</html>

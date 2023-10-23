@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../static/css/lista_musicas.css">
+    <title>Lista de Músicas</title>
+</head>
+<body>
+    <h1>Lista de Músicas</h1>
+    <div class="search-container">
+        <div class="input-container">
+            <input type="text" id="searchInput" placeholder="Digite a música ou o artista">
+            <button id="clearSearchButton" class="styled-button">Limpar</button>
+            <button id="returnButton" class="styled-button">Voltar ao início</button>
+        </div>
+    </div>
+    <h2 id="quantidadeMusicas"></h2>
+
+    <!-- Adicione a div que envolve a lista -->
+    <div class="music-list-container">
+        <ul id="listaMusicas">
+            {% if musicas %}
+                {% for musica in musicas %}
+                    <li>
+                        {{ musica[0] }} - {{ musica[1] }}
+                        <button class="detalhes">Detalhes</button>
+                        <div class="detalhes-musica" style="display: none;">
+                            <p><strong>Nome:</strong> {{ musica[0] }}</p>
+                            <p><strong>Artista:</strong> {{ musica[1] }}</p>
+                            <p><strong>Vibe:</strong> {{ musica[2] }}</p>
+                            <p><strong>Gênero:</strong> {{ musica[3] }}</p>
+                            <p><strong>Dançabilidade:</strong> {{ musica[4] }}</p>
+                            <p><strong>BPM:</strong> {{ musica[5] }}</p>
+                            <p><strong>Popularidade:</strong> {{ musica[6] }}</p>
+                        </div>
+                        <form method="POST" action="{{ url_for('deletar_musica', index=loop.index0) }}">
+                            <button class="deletar" data-index="{{ loop.index0 }}">Deletar</button>
+                        </form>
+                    </li>
+                {% endfor %}
+            {% else %}
+                <p>Lista de músicas vazia, que tal registrar algumas?</p>
+            {% endif %}
+        </ul>
+    </div>
+    
+    <script>
+        document.getElementById("returnButton").addEventListener("click", function() {
+            window.location.href = "{{ url_for('index') }}";
+        });
+    </script>
+    <script src="../static/javascript/lista_musicas.js"></script>
+</body>
+</html>

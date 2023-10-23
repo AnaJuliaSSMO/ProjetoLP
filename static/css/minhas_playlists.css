@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #a4e8eb;
+}
+
+.title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 3px;
+    color: #ffffff;
+}
+
+h1, p {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 3px;
+}
+
+label {
+    display: block;
+    margin-bottom: 2px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.playlists-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    text-align: center;
+    width: 90%;
+    display: flex;
+    height: 100vh;
+}
+
+h2 {
+    text-align: center;
+}
+
+#returnButton {
+    display: block;
+    margin: 20px auto;
+	justify-content: center;
+	align-items: center;
+}
+
+.left-column, .right-column {
+    flex: 1;
+    height: 100%;
+}
+
+.left-column {
+    padding: 20px;
+    background-color: #f6a6ff;
+}
+
+.right-column {
+    padding: 20px;
+    background-color: #fad1ff;
+}
+
+.accordion {
+    background-color: #f1f1f1;
+    color: #333;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    transition: 0.4s;
+	margin-bottom: 10px;
+}
+
+#searchInput {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+#searchButton, #clearSearchButton {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+#searchButton:hover, #clearSearchButton:hover {
+    background-color: #0056b3;
+}
+
+.panel {
+    display: none;
+    overflow: hidden;
+	text-align: left;
+}
+
+.active {
+    background-color: #ccc;
+}
+
+.accordion-container {
+    max-height: 500px; 
+    overflow-y: auto;
+    width: 100%;
+}
+
+.playlist-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.playlist-item .accordion {
+    flex: 1;
+}
+

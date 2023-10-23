@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Minhas Playlists</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/minhas_playlists.css">
+    <script src="../static/javascript/minhas_playlists.js"></script>
+</head>
+<body>
+    <h1>Minhas Playlists</h1>
+        <div class="search-container">
+<div class="input-container">
+    <input type="text" id="searchInput" placeholder="Digite o nome da playlist">
+    <button id="clearSearchButton" class="styled-button">Limpar</button>
+</div>
+		
+		
+		<button id="returnButton" class="styled-button">Voltar ao início</button>
+    </div>
+    <div class="playlists-container">
+        <div class="accordion-container">
+
+<ul id="playlist-list">
+    {% if playlists %}
+        {% for nome_playlist, musicas_da_playlist in playlists.items() %}
+        <li>
+            <button class="accordion">{{ nome_playlist }}</button>
+            <!-- Adicione uma div para conter as músicas da playlist -->
+            <div class="panel">
+                <ul class="musicas-playlist">
+                    {% for musica in musicas_da_playlist %}
+                        <li>{{ musica }}</li>
+                    {% endfor %}
+                </ul>
+				            <!-- Adicione o botão "Excluir" e um formulário para enviar a solicitação de exclusão -->
+            <form method="POST" action="/excluir_playlist">
+                <input type="hidden" name="playlist_name" value="{{ nome_playlist }}">
+                <button type="submit" class="excluir-button">Excluir</button>
+            </form>
+            </div>
+
+        </li>
+        {% endfor %}
+    {% else %}
+        <p>Lista de playlists vazia, que tal criar uma?</p>
+    {% endif %}
+</ul>
+
+        </div>
+    </div>
+    <script>
+        document.getElementById("returnButton").addEventListener("click", function() {
+            window.location.href = "{{ url_for('index') }}";
+        });
+		
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+              panel.style.display = "none";
+            } else {
+              panel.style.display = "block";
+            }
+          });
+        }
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+    </script>
+	
+	
+</body>
+</html>

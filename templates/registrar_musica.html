@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../static/css/registrar_musica.css">
+    <title>Registrar Música</title
+</head>
+<body>
+    <h1>Registrar Nova Música</h1>
+    <h3>Por favor, preencha todos os campos, se não a música não será salva!</h3>
+    <form method="post">
+        <label for="nome">Nome da Música (obrigatório):</label>
+        <input type="text" id="nome" name="nome" required><br><br>
+
+        <label for="artista">Artista (obrigatório):</label>
+        <input type="text" id="artista" name="artista" required><br><br>
+
+        <label for="vibe">Vibe (obrigatório):</label>
+        <select id="vibe" name="vibe" required>
+            <option value="nenhuma" disabled selected hidden>Selecione uma opção</option>
+            <option value="feliz">Feliz</option>
+            <option value="triste">Triste</option>
+            <option value="calmo">Calmo</option>
+			<option value="melancolico">Melancólico</option>
+            <option value="daydream">DayDreaming</option>
+            <option value="estudo">Bom para Estudar</option>
+        </select><br><br>
+
+        <label for="genero">Gênero (obrigatório):</label>
+        <select id="genero" name="genero" required>
+		
+            <option value="nenhuma" disabled selected hidden>Selecione uma opção</option>
+            <option value="eletro">Eletro</option>
+            <option value="kpop">Kpop</option>
+            <option value="pop">Pop</option>
+            <option value="rock">Rock</option>
+            <option value="R&B">R and B</option>
+            <option value="jazz">Jazz</option>
+            <option value="samba">Samba</option>
+            <option value="rock">Rock</option>
+            <option value="country">Country</option>
+            <option value="rap">Rap</option>
+            <option value="hip-hop">Hip-Hop</option>
+            <option value="classica">Clássica</option>
+            <option value="reggae">Reggae</option>
+        </select><br><br>
+
+        <label for="dancabilidade">dancabilidade (obrigatório):</label>
+        <select id="dancabilidade" name="dancabilidade" required>
+            <option value="nenhuma" disabled selected hidden>Selecione uma opção</option>
+			<option value="lenta">Lenta</option>
+            <option value="medio">Médio</option>
+            <option value="muita">Muita</option>
+            <option value="super">Super</option>
+            <option value="headband">Head bang</option>
+        </select><br><br>
+
+        <label for="bpm">BPM (obrigatório):</label>
+        <input type="number" id="bpm" name="bpm" required><br><br>
+
+        <label for="popularidade">Popularidade (obrigatório):</label>
+        <select id="popularidade" name="popularidade" required>
+            <option value="nenhuma">Selecione uma opção</option>
+            <option value="underground">Underground</option>
+            <option value="medio">Médio</option>
+            <option value="famoso">Famoso</option>
+            <option value="mundial">Mundial</option>
+        </select><br><br>
+
+        <input type="submit" value="Salvar" id="saveButton">
+		<input type="button" value="Voltar ao início" id="returnButton">
+        <input type="button" value="Ver Listagem de músicas" id="verlistaButton">
+	</form>
+	 <script>
+		document.getElementById("returnButton").addEventListener("click", function() {
+			window.location.href = "{{ url_for('index') }}";
+		});
+		
+		
+		document.getElementById("verlistaButton").addEventListener("click", function() {
+			window.location.href = "{{ url_for('lista_musicas')}}";
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+body {
+    background-color: #ffffcc;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+}
+
+h1 {
+    margin-top: 100px;
+}
+
+a {
+    display: inline-block;
+    background-color: #b3e0ff;
+    color: #333;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 20px;
+    width: 300px;
+}
+
+a:hover {
+    background-color: #66b3ff;
+}

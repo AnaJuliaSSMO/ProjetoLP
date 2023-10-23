@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    display: flex;
+}
+
+.left-column {
+    background-color: #f6a6ff;
+}
+
+.left-column, .right-column {
+    flex: 1;
+    height: 100vh;
+    padding: 20px;
+}
+
+.right-column {
+    background-color: #fad1ff;
+}
+
+.right-column form {
+    max-height: 80%;
+    overflow-y: auto;
+}
+
+.recomendacao-textbox {
+    height: 85%;
+    width: 100%;
+    resize: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    display: flex;
+	margin-top: 40px;
+}
+
+h1, p{
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 3px;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+label {
+    display: block;
+    margin-bottom: 2px;
+}
+
+input[type="text"],
+select,
+input[type="number"] {
+    width: 99%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+}
+
+select {
+    cursor: pointer;
+}
+
+input[type="submit"],
+input[type="button"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover {
+    background-color: #0056b3;
+}

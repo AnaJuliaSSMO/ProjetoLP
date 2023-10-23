@@ -1,0 +1,26 @@
+SnowFairy:FairyTail:triste:eletro:lenta:200:mundial
+Wonderland:ATEEZ:feliz:kpop:super:250:mundial
+Answer:ATEEZ:feliz:kpop:super:250:mundial
+Inception:ATEEZ:feliz:eletro:super:250:mundial
+BreakAway:ArtistsvsPoet:triste:eletro:lenta:158:underground
+Lounderthanbombs:BTS:triste:eletro:lenta:200:mundial
+BloodSweat&Tears:BTS:triste:kpop:muita:123:famoso
+SayMyName:ATEEZ:calmo:pop:medio:200:medio
+God'sMenu:StrayKids:daydream:rap:muita:260:famoso
+FashionMonster:KyaryPamyuPamyu:feliz:pop:muita:130:medio
+WhereverYouAre:OneOkRock:melancolico:rock:medio:469:underground
+Wave:ATEEZ:calmo:pop:medio:69:medio
+BackDoor:StrayKids:daydream:kpop:muita:230:famoso
+NinjaReBangBang:KyaryPamyuPamyu:feliz:pop:muita:123:medio
+TheBeginning:OneOkRock:melancolico:rock:medio:652:underground
+Dope:BTS:feliz:kpop:muita:200:famoso
+HalaHala:ATEEZ:daydream:kpop:muita:652:medio
+MIROH:StrayKids:triste:kpop:muita:652:famoso
+PONPONPON:KyaryPamyuPamyu:feliz:pop:muita:469:medio
+SpringDay:BTS:triste:kpop:calmo:120:famoso
+Fireworks(I'mTheOne):ATEEZ:daydream:kpop:muita:69:medio
+Voices:StrayKids:melancolico:kpop:medio:123:famoso
+MondaiGirl:KyaryPamyuPamyu:feliz:pop:muita:100:medio
+Never knew her name:Unknow:daydream:hip-hop:lenta:50:famoso
+teste:teste1:melancolico:pop:muita:123:underground
+teste:teste1:melancolico:samba:medio:123:medio
